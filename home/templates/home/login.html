@@ -1,0 +1,31 @@
+{%load static%}
+<!DOCTYPE html><!--Document Type Declaration-->
+<html>
+    <head>
+        <title>WearFaceMask-Log In or Sign Up</title>  
+        <link rel="shortcut icon" type="image/jpg" href="titleLogo.jpg"> 
+        <link rel="stylesheet" type="text/css" href="{% static 'home/style.css' %}"><!--link with the 1style.css -->
+  </head>
+
+<body>
+    <img src="titleLogo.jpg">
+    <header><!--division helps to store section of html document which can be used in css for style -->
+        <div class="sign-up-form">
+            <img src="./user-icon.jpg">
+            <h1>Connect with us</h1>
+            <form>
+            <input type="email" class="input-box" placeholder="Email">
+            <input type="password" class="input-box" placeholder="Password(6+character)">
+            <p><span><input type="checkbox"></span>I agree to the terms of services</p>
+            <button type="button" class="signup-btn">Log In</button>
+            <hr><!--horizontal line-->
+            <p class="or">OR</p>
+            <button type="button" class="signup-btn"> Sign Up</button>
+            <p>Do you have an account? <a href="signup.html">Sign up</a> <br>
+            {% comment %} <a href="https://facebook.com/">Login with Facebook</a></p> {% endcomment %}
+        </form>
+   </header><!--Header is used for content information website information website logo etc -->
+</body>
+<p>2022 &copy; Wear Mask. All Rights Reserved.</p> 
+</html>
+   

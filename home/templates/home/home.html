@@ -1,0 +1,24 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'home/style2.css' %}">
+        <link rel="shortcut icon" type="image/jpg" href="titleLogo.jpg">
+    </head>
+    <body>
+    <header>
+        <div class="main">
+            <ul>
+                <li class="active" ><a href="#">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="stream">Stream</a></li>
+            <div class="main2">
+                <li><a href="{% url 'login' %}">Log In</a></li>
+            </div>
+            </ul>
+        </div>
+    </header>
+    <p>2022 &copy; Wear Mask. All Rights Reserved.</p>
+    </body>
+</html>
