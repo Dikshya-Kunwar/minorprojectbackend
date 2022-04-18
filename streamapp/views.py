@@ -7,6 +7,9 @@ from streamapp.camera import VideoCamera, IPWebCam, MaskDetect, LiveWebCam
 def index(request):
 	return render(request, 'streamapp/home.html')
 
+def stream(request):
+	return render(request,'streamapp/stream.html')
+
 
 def gen(camera):
 	while True:
@@ -15,9 +18,9 @@ def gen(camera):
 				b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
 
 
-# def video_feed(request):
-# 	return StreamingHttpResponse(gen(VideoCamera()),
-# 					content_type='multipart/x-mixed-replace; boundary=frame')
+def video_feed(request):
+	return StreamingHttpResponse(gen(VideoCamera()),
+					content_type='multipart/x-mixed-replace; boundary=frame')
 
 
 def webcam_feed(request):
@@ -29,6 +32,6 @@ def mask_feed(request):
 	return StreamingHttpResponse(gen(MaskDetect()),
 					content_type='multipart/x-mixed-replace; boundary=frame')
 					
-# def livecam_feed(request):
-# 	return StreamingHttpResponse(gen(LiveWebCam()),
-# 					content_type='multipart/x-mixed-replace; boundary=frame')
+def livecam_feed(request):
+	return StreamingHttpResponse(gen(LiveWebCam()),
+					content_type='multipart/x-mixed-replace; boundary=frame')

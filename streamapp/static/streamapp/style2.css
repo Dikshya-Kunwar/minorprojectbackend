@@ -53,6 +53,15 @@ ul li.active a{
     float: Right;
     height: 1px;
 }
+
+.center-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+  }
 p{
     text-align: center;
 }
+

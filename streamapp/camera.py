@@ -41,7 +41,7 @@ class VideoCamera(object):
 
 class IPWebCam(object):
 	def __init__(self):
-		self.url = "http://192.168.0.100:8080/shot.jpg"
+		self.url = "http://127.0.0.1:8000/shot.jpg"
 
 	def __del__(self):
 		cv2.destroyAllWindows()
